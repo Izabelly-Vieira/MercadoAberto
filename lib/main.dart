@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mercadolivre/bottom.dart';
 import 'package:mercadolivre/card_assinatura.dart';
+import 'package:mercadolivre/decoration_body.dart';
 import 'campo_pesquisa.dart';
 import 'card_frete_gratis.dart';
 
@@ -60,14 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           bottom: const PreferredSize(
             preferredSize: Size(50, 30),
-            child: ListTile(
-              leading: Icon(
-                Icons.location_on_outlined,
-                color: Colors.black,
-              ),
-              title: Text(
-                  'Enviar para Marcello Queiroz - Rua Jardim Paulista, 56'),
-            ),
+            child: bottom(),
           ),
 
           backgroundColor:
@@ -78,19 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               child: ListView(
                 children: [
-                  Container(
-                    // ignore: prefer_const_constructors
-                    decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: FractionalOffset(0.5, 0.2),
-                            colors: <Color>[
-                          Color(0xfff5d415),
-                          Color(0xfff5f5f5),
-                        ])),
-                    padding: const EdgeInsets.fromLTRB(60, 10, 60, 15),
-                    child: Image.asset("assets/anuncio.jpg"),
-                  ),
+                  decorat_body(),
                   Card_assinatura(
                     titulo: "Assine o nível 6 por R\$ 9,90/mês!",
                   ),
