@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mercadolivre/botaoCategoria.dart';
 import 'package:mercadolivre/bottom.dart';
 import 'package:mercadolivre/card_assinatura.dart';
 import 'package:mercadolivre/decoration_body.dart';
@@ -78,6 +79,34 @@ class _MyHomePageState extends State<MyHomePage> {
                     titulo: "Assine o nível 6 por R\$ 9,90/mês!",
                   ),
                   Card_frete_gratis(),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 3),
+                    child: Row(
+                      
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: botao_categoria(icone: Icons.phone_android, text: "Recarregar",),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: botao_categoria(icone: Icons.local_offer_rounded, text: "Ofertas",),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: botao_categoria(icone: Icons.shopping_basket_outlined, text: "Mercado",),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: botao_categoria(icone: Icons.directions_car, text: "Veculos",),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: botao_categoria(icone: Icons.add, text: "Ver Mais",),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             )
