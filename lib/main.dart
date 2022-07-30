@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
-                          child: botao_categoria(icone: Icons.add, text: "Ver Mais",),
+                          child: botao_categoria(icone: Icons.add, text: " Ver Mais",),
                         ),
                       ],
                     ),

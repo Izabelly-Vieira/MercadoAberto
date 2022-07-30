@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:mercadolivre/enviarPara.dart';
 
 class bottom extends StatelessWidget {
   const bottom({Key? key}) : super(key: key);
@@ -13,7 +14,6 @@ class bottom extends StatelessWidget {
                 Icons.location_on_outlined,
                 color: Colors.black,
               ),
-              title: Text(
-                  'Enviar para Marcello Queiroz - Rua Jardim Paulista, 56'),
+              title: enviarPara(enviarText: ""),
             );
   }
