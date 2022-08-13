@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class botao_categoria extends StatefulWidget {
-  const botao_categoria({ Key? key, required this.icone,  this.text}) : super(key: key);
+  const botao_categoria({Key? key, required this.icone, this.text})
+      : super(key: key);
 
   final IconData icone;
   final String? text;
@@ -16,40 +17,45 @@ class _botao_categoriaState extends State<botao_categoria> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => {
-        setState(() => {
-          selecionado = !selecionado
-        })
+        setState(() => {selecionado = !selecionado})
       },
-    child: Column(
-      children: [
-        Container(
-         padding: EdgeInsets.fromLTRB(20,20, 20, 20),
-          decoration: BoxDecoration(
-            color:  Colors.white,
-            borderRadius: BorderRadius.circular(100),
-            boxShadow: [
-              BoxShadow(
-                color: Color.fromARGB(255, 182, 181, 181),
-                blurRadius: 5,
-                spreadRadius: 0,
-                offset: Offset(3, 4),
-              )
-            ]
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(100),
+                // ignore: prefer_const_literals_to_create_immutables
+                boxShadow: [
+                  const BoxShadow(
+                    color: Color.fromARGB(255, 182, 181, 181),
+                    blurRadius: 5,
+                    spreadRadius: 0,
+                    offset: Offset(3, 4),
+                  )
+                ]),
+            child: Icon(
+              widget.icone,
+              size: 30,
+              color: selecionado ? Colors.blue : Colors.grey,
+            ),
           ),
-          child:Icon(
-          widget.icone,
-          size: 30,
-          color: selecionado ? Colors.blue : Colors.grey,
-          
-          ),
-        ),
-        Center(
-          child: Padding(padding: EdgeInsets.only(top: 20),
-          child: Text(widget.text ?? "", style: TextStyle(color: selecionado ? Colors.blue : Color.fromARGB(255, 83, 82, 82),),),),
-        )
-        
-      ],
-    ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Text(
+                widget.text ?? "",
+                style: TextStyle(
+                  color: selecionado
+                      ? Colors.blue
+                      : const Color.fromARGB(255, 83, 82, 82),
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -28,7 +28,7 @@ class Card_assinatura extends StatelessWidget {
               titulo,
               style: TextStyle(color: Colors.white),
             ),
-            Icon(
+            const Icon(
               Icons.chevron_right,
               color: Colors.white,
             )
